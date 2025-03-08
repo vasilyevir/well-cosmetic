@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="fix code" />
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="fix code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,8 +80,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev (1).executor": "Run",
+    "npm.dev (2).executor": "Run",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "/Users/ilavasilev/Documents/Frelance2/well/frontend/well-cosmetics-frontend/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/ilavasilev/Documents/Frelance2/well/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,13 +95,24 @@
       <recent name="$PROJECT_DIR$/backend/well-cosmetics-backend/routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
       <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/brand/[id]" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.dev (2)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/well-cosmetics-backend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -112,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (2)" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
       </list>
@@ -132,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741267651844</updated>
-      <workItem from="1741267653785" duration="34314000" />
+      <workItem from="1741267653785" duration="37583000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

@@ -4,7 +4,7 @@ import {
   BreadcrumbLink,
   BreadcrumbList, BreadcrumbPage,
   BreadcrumbSeparator
-} from "src/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb";
 import {sql} from "@vercel/postgres";
 import {notFound} from "next/navigation";
 
@@ -31,7 +31,7 @@ export default async function PageBrand({
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/public">Главная</BreadcrumbLink>
+            <BreadcrumbLink href="/">Главная</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>

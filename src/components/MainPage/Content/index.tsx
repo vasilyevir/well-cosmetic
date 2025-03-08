@@ -1,7 +1,7 @@
 import Link from "next/link";
-import {TypographyH1} from "src/ui/Text";
-import {TypographyH2} from "src/ui/Text/h2";
-import {TypographyList} from "src/ui/Text/list";
+import {TypographyH1} from "@/ui/Text";
+import {TypographyH2} from "@/ui/Text/h2";
+import {TypographyList} from "@/ui/Text/list";
 import Image from "next/image";
 
 interface MainPageContentProps {

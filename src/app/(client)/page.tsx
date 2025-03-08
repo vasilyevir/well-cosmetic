@@ -1,4 +1,4 @@
-import {MainPageContent} from "src/components/MainPage/Content";
+import {MainPageContent} from "@/components/MainPage/Content";
 
 export default async function Home() {
   let brands = [];

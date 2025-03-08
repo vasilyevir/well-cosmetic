@@ -4,8 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/Header/index.tsx" afterDir="false" />
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/brand/route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/category/route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/seed/route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/blockquote.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h1.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h3.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h4.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/large.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/lead.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/p.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/small.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +40,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "vasilyevir"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -40,6 +71,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vasilyevir/well-cosmetic.git",
+    "accountId": "9b3ae36c-ebfa-45c6-8307-6236871ecb00"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
@@ -54,17 +91,42 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ilavasilev/Documents/Frelance2/well/frontend/well-cosmetics-frontend/src/app/(client)",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
     "ts.external.directory.path": "/Users/ilavasilev/Documents/Frelance2/well/frontend/well-cosmetics-frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend" />
+      <recent name="$PROJECT_DIR$/backend/well-cosmetics-backend/routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/brand/[id]" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev (1)">
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backend/well-cosmetics-backend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/frontend/well-cosmetics-frontend/package.json" />
       <command value="run" />
@@ -77,6 +139,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -96,11 +159,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741267651844</updated>
-      <workItem from="1741267653785" duration="721000" />
+      <workItem from="1741267653785" duration="33567000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1741268929764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741268929764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

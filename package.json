@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "frontend/well-cosmetics-frontend/node_modules/.bin/next dev --turbopack",
+    "build": "frontend/well-cosmetics-frontend/node_modules/.bin/next build",
+    "start": "frontend/well-cosmetics-frontend/node_modules/.bin/next start",
+    "lint": "frontend/well-cosmetics-frontend/node_modules/.bin/next lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",

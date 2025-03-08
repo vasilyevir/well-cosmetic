@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/brand/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/category/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/seed/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/MainPage/Content/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/blockquote.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h1.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h2.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h3.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/h4.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/large.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/lead.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/p.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text/small.tsx" afterDir="false" />
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add first page and write first request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/brand/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/brand/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/category/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/category/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/seed/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api/seed/route.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/components/MainPage/Content/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741267651844</updated>
-      <workItem from="1741267653785" duration="33567000" />
+      <workItem from="1741267653785" duration="33911000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -169,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741268929764</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add first page and write first request">
+      <option name="closed" value="true" />
+      <created>1741458770445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741458770445</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="add first page and write first request" />
+    <option name="LAST_COMMIT_MESSAGE" value="add first page and write first request" />
   </component>
 </project>

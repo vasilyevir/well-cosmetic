@@ -1,7 +1,6 @@
-import {NextRequest} from "next/server";
 import { sql } from "@vercel/postgres";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const data = await sql`
       SELECT * FROM category WHERE id_brand = 1

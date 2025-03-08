@@ -1,7 +1,6 @@
-import {NextRequest} from "next/server";
 import { sql } from "@vercel/postgres";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const data = await sql`
       SELECT b.id AS id, b.name AS name, b.image AS image,

@@ -1,4 +1,4 @@
-export async function GET(request: Request) {
+export async function GET() {
   return new Response(JSON.stringify({text: 'Hello, Next.js!'}), {
     status: 200,
     headers: {

@@ -21,7 +21,7 @@ export const MainPageContent = ({ brands } : MainPageContentProps) => {
     <div className="p-8 flex flex-col gap-16 --font-sans">
       <TypographyH1>Выбор бренда</TypographyH1>
       <div className="grid grid-cols-3 gap-4">
-        {brands.map((brand) => (
+        {brands?.map((brand) => (
           <div className="flex flex-col gap-4" key={`brand_${brand.id}`}>
             <Link
               href={`/brand/${brand.id}`}
@@ -40,7 +40,7 @@ export const MainPageContent = ({ brands } : MainPageContentProps) => {
               </TypographyH2>
             </Link>
             <TypographyList>
-              {brand.categories.map((category) => (
+              {brand.categories?.map((category) => (
                 <li key={`category_${category.id}`}>
                   <Link href={`/category/${category.id}`} className="hover:text-gray-500">
                     {category.name}

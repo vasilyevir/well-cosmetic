@@ -35,7 +35,7 @@ export const MainPageContent = ({ brands } : MainPageContentProps) => {
             <TypographyList>
               {brand.categories?.map((category) => (
                 <li key={`category_${category.id}`}>
-                  <Link href={`/category/${category.id}`} className="hover:text-gray-500">
+                  <Link href={`/brand/${brand.id}/category/${category.id}`} className="hover:text-gray-500">
                     {category.name}
                   </Link>
                 </li>

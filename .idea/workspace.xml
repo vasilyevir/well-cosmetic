@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="fix code">
-      <change beforePath="$PROJECT_DIR$/src/app/(client)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/category/[idCategory]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +77,7 @@
     "npm.dev (1).executor": "Run",
     "npm.dev (2).executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
     "ts.external.directory.path": "/Users/ilavasilev/Documents/Frelance2/well/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -93,7 +96,7 @@
       <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/brand/[id]" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (2)">
+  <component name="RunManager" selected="npm.start">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/well-cosmetics-backend/package.json" />
       <command value="run" />
@@ -124,8 +127,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev (2)" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
@@ -147,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741267651844</updated>
-      <workItem from="1741267653785" duration="40387000" />
+      <workItem from="1741267653785" duration="40962000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

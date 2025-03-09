@@ -3,17 +3,10 @@ import {TypographyH1} from "@/ui/Text";
 import {TypographyH2} from "@/ui/Text/h2";
 import {TypographyList} from "@/ui/Text/list";
 import Image from "next/image";
+import {MutatedBrandType} from "@/api/brand";
 
 interface MainPageContentProps {
-  brands: Array<{
-    id: number;
-    name: string;
-    image: string;
-    categories: Array<{
-      id: number;
-      name: string
-    }>
-  }>
+  brands: Array<MutatedBrandType>
 }
 
 export const MainPageContent = ({ brands } : MainPageContentProps) => {

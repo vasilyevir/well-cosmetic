@@ -1,6 +1,6 @@
 import {sql} from "@vercel/postgres";
 
-import {MutatedBrandType} from "./type";
+import { BrandType, MutatedBrandType } from "@/api";
 
 export const GetBrand = async () => {
   const data = await sql<MutatedBrandType>`
@@ -12,4 +12,12 @@ export const GetBrand = async () => {
   `;
 
   return data.rows;
+}
+
+export const getBrandFromID = async ({id}: {id: string}) => {
+  const brand = await sql<BrandType>`
+    SELECT * FROM public.brand WHERE id = ${id}
+  `
+
+  return brand.rows
 }

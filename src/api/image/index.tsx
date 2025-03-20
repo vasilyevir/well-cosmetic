@@ -7,7 +7,7 @@ export const upload = async (file?: File, nameFolder?: string) => {
 
     const blob = await put(`${folder}${filename}` || "default.png", file, {
       access: "public",
-      token: process.env.NEXT_PUBLIC_BLOB_READ_WRITE_TOKEN,
+      token: process.env.BLOB_READ_WRITE_TOKEN,
     });
 
     return blob.url;

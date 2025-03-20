@@ -1,3 +1,6 @@
+"use server";
+
+import "server-only";
 import { put } from "@vercel/blob";
 
 export const upload = async (file?: File, nameFolder?: string) => {

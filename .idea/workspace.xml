@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add admin">
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/brand/createBrand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/createBrand.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/image/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +175,7 @@
       <workItem from="1741867160670" duration="5551000" />
       <workItem from="1741944173803" duration="34149000" />
       <workItem from="1742153352496" duration="1027000" />
-      <workItem from="1742230279806" duration="38585000" />
+      <workItem from="1742230279806" duration="40070000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -207,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742479097752</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add env">
+      <option name="closed" value="true" />
+      <created>1742483849949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742483849949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +228,7 @@
     <MESSAGE value="add first page and write first request" />
     <MESSAGE value="fix code" />
     <MESSAGE value="add admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admin" />
+    <MESSAGE value="add env" />
+    <option name="LAST_COMMIT_MESSAGE" value="add env" />
   </component>
 </project>

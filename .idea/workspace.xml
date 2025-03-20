@@ -4,20 +4,87 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="fix code">
-      <change afterPath="$PROJECT_DIR$/src/api/category/getCategories.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/category/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/category/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/product/getProducts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/product/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/product/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add admin">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/brand/createBrand.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/image/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/user/login.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/user/sign-up.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/create/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sell/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sign-in/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sign-up/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/product/[id]/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/product/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/file/upload/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AmountController/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/CardCart/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/CardProduct/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/Price/Price.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/Price/PriceWithSale.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/label.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/popover.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/scroll-area.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/separator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/tabs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/cart-store-provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/cart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Brand/CreateBrandForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Cart/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/brand/getBrand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/getBrand.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/brand/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/brand/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/category/getCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/category/getCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/category/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/category/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/category/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/category/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/category/[idCategory]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/category/[idCategory]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/product/getProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/getProducts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/product/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/product/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/category/[idCategory]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/category/[idCategory]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(client)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/blockquote.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/blockquote.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/h1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/h1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/h2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/h2.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/h3.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/h3.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/h4.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/h4.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/large.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/large.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/lead.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/lead.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/p.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/p.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/small.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/small.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,37 +140,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ilavasilev/Documents/Frelance2/well/frontend/well-cosmetics-frontend/src/app/(client)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev (2).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/ilavasilev/Documents/Frelance2/well/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ilavasilev/Documents/Frelance2/well/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev (2).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/ilavasilev/Documents/Frelance2/well/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/ilavasilev/Documents/Frelance2/well/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/ui/Text" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend" />
-      <recent name="$PROJECT_DIR$/backend/well-cosmetics-backend/routes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/brand/[id]" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]" />
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin" />
+      <recent name="$PROJECT_DIR$/src/app/(client)" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (2)">
@@ -172,7 +245,13 @@
       <option name="presentableId" value="Default" />
       <updated>1741267651844</updated>
       <workItem from="1741267653785" duration="48010000" />
-      <workItem from="1741597374487" duration="4473000" />
+      <workItem from="1741597374487" duration="6175000" />
+      <workItem from="1741803265283" duration="2548000" />
+      <workItem from="1741853820702" duration="360000" />
+      <workItem from="1741867160670" duration="5551000" />
+      <workItem from="1741944173803" duration="34149000" />
+      <workItem from="1742153352496" duration="1027000" />
+      <workItem from="1742230279806" duration="37891000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -208,6 +287,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="add first page and write first request" />
     <MESSAGE value="fix code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix code" />
+    <MESSAGE value="add admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="add admin" />
   </component>
 </project>

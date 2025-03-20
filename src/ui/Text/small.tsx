@@ -1,9 +1,10 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from "react";
+import { cn } from "@/lib/utils";
 
-export function TypographySmall({children}: PropsWithChildren) {
-  return (
-    <small className="text-sm font-medium leading-none">
-      {children}
-    </small>
-  )
+interface TypographySmallProps {
+  className?: string;
+}
+
+export function TypographySmall({ children, className }: PropsWithChildren<TypographySmallProps>) {
+  return <small className={cn("text-sm font-medium leading-none", className)}>{children}</small>;
 }

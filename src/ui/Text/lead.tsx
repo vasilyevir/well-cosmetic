@@ -1,9 +1,5 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from "react";
 
-export function TypographyLead({children}: PropsWithChildren) {
-  return (
-    <p className="text-xl text-muted-foreground">
-      {children}
-    </p>
-  )
+export function TypographyLead({ children }: PropsWithChildren) {
+  return <p className="text-xl text-muted-foreground">{children}</p>;
 }

@@ -1,9 +1,10 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from "react";
+import { cn } from "@/lib/utils";
 
-export function TypographyP({children}: PropsWithChildren) {
-  return (
-    <p className="leading-7 [&:not(:first-child)]:mt-6">
-      {children}
-    </p>
-  )
+interface TypographyPProps {
+  className?: string;
+}
+export function TypographyP({ children, className }: PropsWithChildren<TypographyPProps>) {
+  console.log(children);
+  return <p className={cn("leading-7", className)}>{children}</p>;
 }

@@ -5,8 +5,8 @@ export interface ProductType {
   price: number;
   price_with_sale?: number;
   description: string;
-  id_brand: number;
   id_category: number;
+  amount: number;
 }
 
 export interface ProductMutatedType extends ProductType {

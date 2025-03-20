@@ -1,2 +1,2 @@
-export * from './getBrand';
-export * from './type';
+export * from "./getBrand";
+export * from "./type";

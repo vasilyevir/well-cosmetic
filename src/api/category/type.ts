@@ -1,6 +1,6 @@
 export interface CategoryType {
-  id: number;
-  id_brand: number;
+  id: string;
+  id_brand: string;
   name: string;
   product: number[];
   image: string;
@@ -8,4 +8,13 @@ export interface CategoryType {
 
 export interface CategoryMutatedType extends CategoryType {
   brand_name: string;
+}
+export interface CategoryCreateType {
+  image: string;
+  name: string;
+  id_brand: string;
+}
+
+export interface CategoryEditType extends CategoryCreateType {
+  id: string;
 }

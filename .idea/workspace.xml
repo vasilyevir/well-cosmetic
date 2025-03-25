@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add env">
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add edit and delete functional">
+      <change afterPath="$PROJECT_DIR$/src/api/category/createCategory.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/product/createProduct.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/edit/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/category/[id]/edit/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/category/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/category/create/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]/edit/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/product/create/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/category/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileLoader/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/alert-dialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/resizable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/textarea.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Brand/BrandPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Category/CreateCategoryForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Category/PageCategory.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Product/CreateProductForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/brand/createBrand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/createBrand.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/image/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/brand/getBrand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/getBrand.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/brand/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/brand/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/category/getCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/category/getCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/category/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/category/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/product/getProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/getProducts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/product/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/category/[idCategory]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardProduct/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardProduct/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/large.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/large.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Text/p.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Text/p.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Brand/CreateBrandForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Brand/CreateBrandForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +91,9 @@
     &quot;accountId&quot;: &quot;9b3ae36c-ebfa-45c6-8307-6236871ecb00&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -69,7 +108,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/ilavasilev/Documents/Frelance2/well/src",
+    "last_opened_file_path": "/Users/ilavasilev/Documents/Frelance2/well/src/app/(admin)/admin/brand/[id]/edit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -89,18 +128,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/brand/[id]/edit" />
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/brand/[id]" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/category" />
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/category/[id]" />
+      <recent name="$PROJECT_DIR$/src/app/(admin)/admin/brand/edit/[id]" />
       <recent name="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]" />
       <recent name="$PROJECT_DIR$/src/app/(admin)/admin" />
-      <recent name="$PROJECT_DIR$/src/app/(client)" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/frontend/well-cosmetics-frontend/src/app/(client)" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (2)">
@@ -175,7 +214,7 @@
       <workItem from="1741867160670" duration="5551000" />
       <workItem from="1741944173803" duration="34149000" />
       <workItem from="1742153352496" duration="1027000" />
-      <workItem from="1742230279806" duration="40070000" />
+      <workItem from="1742230279806" duration="103439000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -217,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742483849949</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add env">
+      <option name="closed" value="true" />
+      <created>1742491200731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742491200731</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +276,7 @@
     <MESSAGE value="fix code" />
     <MESSAGE value="add admin" />
     <MESSAGE value="add env" />
-    <option name="LAST_COMMIT_MESSAGE" value="add env" />
+    <MESSAGE value="add edit and delete functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="add edit and delete functional" />
   </component>
 </project>

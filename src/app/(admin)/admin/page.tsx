@@ -44,7 +44,6 @@ export default function Page() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const data = await SignUpRequest(values);
-      console.log(data?.userId, "userID");
       if (data?.userId) {
         await createSession(data.userId);
       }

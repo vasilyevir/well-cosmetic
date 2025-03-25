@@ -1,3 +1,7 @@
+"use server";
+
+import "server-only";
+
 import { sql } from "@vercel/postgres";
 import { CategoryMutatedType, CategoryType } from "./type";
 
@@ -13,6 +17,14 @@ export const getCategories = async ({ id }: { id: string }) => {
 };
 
 export const getCategoryFromID = async ({ id }: { id: string }) => {
+  const category = await sql<CategoryType>`
+    SELECT * FROM public.category WHERE id = ${id}
+  `;
+
+  return category.rows;
+};
+
+export const getCategoryFromBrandID = async ({ id }: { id: string }) => {
   const category = await sql<CategoryType>`
     SELECT * FROM public.category WHERE id = ${id}
   `;

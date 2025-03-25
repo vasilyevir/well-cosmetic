@@ -1,3 +1,6 @@
+"use server";
+import "server-only";
+
 import { sql } from "@vercel/postgres";
 import { ProductMutatedType } from "@/api/product/type";
 import { getBrandFromID } from "@/api";

@@ -12,12 +12,11 @@ import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Label } from "@/components/ui/label";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { upload } from "@/api/image";
-import { createBrand } from "@/api/brand/createBrand";
+import { createBrand, editBrand } from "@/api/brand/createBrand";
+import { FileLoader } from "@/components/FileLoader";
 
 const formSchema = z.object({
   name: z.string().trim(),
@@ -26,29 +25,45 @@ const formSchema = z.object({
 });
 type FormSchemaType = z.infer<typeof formSchema>;
 
-export default function CreateBrandForm() {
+interface CreateBrandFormProps {
+  name?: string;
+  file?: string;
+  isEditable?: boolean;
+}
+
+export default function CreateBrandForm({ name, file, isEditable }: CreateBrandFormProps) {
   const router = useRouter();
+  const { id } = useParams<{ id: string }>();
   const form = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      name: name || "",
+      file_string: file || "",
     },
   });
 
   const handleSubmit = async ({ name, file_blob, file_string }: FormSchemaType) => {
+    let result;
+
     if (file_string) {
-      const { id } = await createBrand({ name, image: file_string });
-
-      console.log(id);
-
-      if (id) router.push("/admin/brand");
+      if (isEditable) {
+        result = await editBrand({ name, image: file_string, id });
+      } else {
+        result = await createBrand({ name, image: file_string });
+      }
     }
+
     if (file_blob) {
-      const link = await upload(file_blob[0]);
-      const { id } = await createBrand({ name, image: link });
+      const link = await upload(file_blob[0], `/product/`);
 
-      if (id) router.push("/admin/brand");
+      if (isEditable) {
+        result = await editBrand({ name, image: link, id });
+      } else {
+        result = await createBrand({ name, image: link });
+      }
     }
+
+    if (result) router.push("/admin/brand");
   };
 
   return (
@@ -67,33 +82,7 @@ export default function CreateBrandForm() {
             </FormItem>
           )}
         />
-        <Tabs defaultValue="link" className="w-full flex flex-col gap-4" onChange={console.log}>
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="link">Link</TabsTrigger>
-            <TabsTrigger value="file">File</TabsTrigger>
-          </TabsList>
-          <TabsContent value="link">
-            <FormField
-              control={form.control}
-              name="file_string"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Изображение</FormLabel>
-                  <FormControl>
-                    <Input placeholder="https://some-site.com/image.png" type="text" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </TabsContent>
-          <TabsContent value="file" className="w-full">
-            <div className="grid w-full  items-center gap-1.5">
-              <Label htmlFor="picture">Picture</Label>
-              <Input id="picture" type="file" {...form.register("file_blob")} />
-            </div>
-          </TabsContent>
-        </Tabs>
+        <FileLoader />
         <Button type="submit">Отправить</Button>
       </form>
     </Form>

@@ -14,8 +14,8 @@ interface ICartStoreState {
 
 interface ICartStoreAction {
   addCartItem: (product: ProductType) => void;
-  sellCartItem: (id: number) => void;
-  deleteCartItem: (id: number) => void;
+  sellCartItem: (id: string) => void;
+  deleteCartItem: (id: string) => void;
   clearCart: () => void;
 }
 

@@ -1,3 +1,6 @@
+"use server";
+import "server-only";
+
 import { sql } from "@vercel/postgres";
 
 import { BrandType, MutatedBrandType } from "@/api";
@@ -26,6 +29,13 @@ export const GetBrand = async () => {
         brand b
   `;
 
+  return data.rows;
+};
+
+export const getAllBrands = async () => {
+  const data = await sql<BrandType>`
+    SELECT * FROM public.brand
+  `;
   return data.rows;
 };
 

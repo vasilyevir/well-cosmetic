@@ -46,7 +46,7 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
 
     const categories = await getCategories({ id: idBrand });
 
-    setCategories(categories);
+    setCategories(categories.results);
   };
 
   return (

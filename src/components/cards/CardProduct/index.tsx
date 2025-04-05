@@ -10,7 +10,7 @@ import { PriceWithSale } from "@/components/cards/Price/PriceWithSale";
 import { Price } from "@/components/cards/Price/Price";
 import Link from "next/link";
 import { AmountController } from "@/components/AmountController";
-import { PencilIcon, TrashIcon } from "lucide-react";
+import { CopyIcon, PencilIcon, TrashIcon } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -75,6 +75,11 @@ export const CardProduct = (
             <Button asChild size="icon" variant="secondary">
               <Link href={`/admin/product/${id}/edit`}>
                 <PencilIcon />
+              </Link>
+            </Button>
+            <Button asChild size="icon" variant="secondary">
+              <Link href={`/admin/product/${id}/edit`}>
+                <CopyIcon />
               </Link>
             </Button>
           </div>

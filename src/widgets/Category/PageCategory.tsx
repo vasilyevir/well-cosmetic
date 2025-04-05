@@ -59,9 +59,11 @@ export const PageCategory = ({
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <Button asChild>
-          <Link href="/admin/product/create">Создать</Link>
-        </Button>
+        {isEditable && (
+          <Button asChild>
+            <Link href="/admin/product/create">Создать</Link>
+          </Button>
+        )}
       </div>
       <div className="grid grid-cols-3 gap-8">
         {categories.map((product) => (

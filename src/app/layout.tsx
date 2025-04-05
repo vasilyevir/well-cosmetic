@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { CartStoreProvider } from "@/providers/cart-store-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { QueryProvider } from "@/providers/query-provider";
 
 const geistSans = Open_Sans({
   variable: "--font-geist-sans",
@@ -26,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
-        <CartStoreProvider>{children}</CartStoreProvider>
+        <CartStoreProvider>
+          <QueryProvider>{children}</QueryProvider>
+        </CartStoreProvider>
+        <Toaster />
       </body>
     </html>
   );

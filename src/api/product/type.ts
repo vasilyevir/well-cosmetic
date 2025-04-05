@@ -7,6 +7,10 @@ export interface ProductType {
   description: string;
   id_category: string;
   amount: number;
+  article?: string;
+  country?: string;
+  volume?: string;
+  type_product?: string;
 }
 
 export interface ProductMutatedType extends ProductType {
@@ -22,6 +26,10 @@ export interface ProductCreateType {
   description: string;
   id_category: string;
   amount: number;
+  article?: string;
+  country?: string;
+  volume?: string;
+  type_product?: string;
 }
 
 export interface ProductEditType extends ProductCreateType {

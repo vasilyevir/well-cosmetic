@@ -24,22 +24,32 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useEffect, useState } from "react";
-import { CategoryType, getCategories } from "@/api/category";
+import { useEffect } from "react";
+import { getCategories } from "@/api/category";
 import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
-import { upload } from "@/api/image";
 import { createProduct, editProduct } from "@/api/product/createProduct";
 
+import { getTypeProducts } from "@/api/type_product";
+import Link from "next/link";
+import { PlusIcon } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { QueryKeyEnum } from "@/api/queryKey.enum";
+import { useDownloadImage } from "@/hooks/useDownloadImage";
+
 const formSchema = z.object({
-  name: z.string(),
+  name: z.string().nonempty("Введите название"),
   file_string: z.string(),
   file_blob: z.any().optional(),
   price: z.number().positive(),
   price_with_sale: z.string().optional(),
-  description: z.string(),
+  description: z.string().nonempty(),
   amount: z.number(),
-  id_brand: z.string(),
-  id_category: z.string(),
+  id_brand: z.string().nonempty("Выберите бренд"),
+  id_category: z.string().nonempty("Выберите категорию"),
+  article: z.string().nonempty(""),
+  type_product: z.string().nonempty("Выберите средство"),
+  country: z.string().nonempty("Введите страну производства"),
+  volume: z.string().nonempty("Введите объем"),
 });
 type FormSchemaType = z.infer<typeof formSchema>;
 
@@ -62,25 +72,35 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
       price_with_sale: defaultValues?.price_with_sale ? `${defaultValues?.price_with_sale}` : "0",
       description: defaultValues?.description || "",
       amount: defaultValues?.amount || 0,
+      article: defaultValues?.article || "",
+      type_product: `${defaultValues?.type_product || ""}`,
+      volume: defaultValues?.volume || "",
+      country: defaultValues?.country || "",
     },
   });
-  const [categories, setCategories] = useState<CategoryType[] | null>(null);
 
   const id_brand = useWatch({
     control: form.control,
     name: "id_brand",
   });
+
+  const { data: typeProducts } = useQuery({
+    queryFn: getTypeProducts,
+    queryKey: [QueryKeyEnum.TypesProduct],
+  });
+
+  const { data: categories } = useQuery({
+    queryFn: () => getCategories({ id: id_brand }),
+    queryKey: [QueryKeyEnum.Category, id_brand],
+    enabled: !!id_brand,
+  });
+
+  const { download } = useDownloadImage();
+
   const router = useRouter();
 
   useEffect(() => {
-    const getAllCategories = async () => {
-      if (!id_brand) return null;
-
-      const categories = await getCategories({ id: id_brand });
-      setCategories(categories);
-    };
-
-    getAllCategories();
+    form.resetField("id_category");
   }, [id_brand]);
 
   const onSubmit = async (data: FormSchemaType) => {
@@ -95,16 +115,13 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
       file_blob,
     } = data;
     let results;
-    let link;
-    if (file_blob) {
-      link = await upload(file_blob[0]);
-    }
+    const image = await download({ file_blob: file_blob, file_string });
 
     if (!defaultValues) {
       results = await createProduct({
         name,
         id_category,
-        image: link ? link : file_string,
+        image,
         description,
         price,
         price_with_sale: price_with_sale ? Number(price_with_sale) : 0,
@@ -114,7 +131,7 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
       results = await editProduct({
         name,
         id_category,
-        image: link ? link : file_string,
+        image,
         description,
         price,
         price_with_sale: price_with_sale ? Number(price_with_sale) : 0,
@@ -169,7 +186,7 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      {categories?.map(({ id, name }) => (
+                      {categories?.results.map(({ id, name }) => (
                         <SelectItem value={`${id}`} key={id}>
                           {name}
                         </SelectItem>
@@ -258,6 +275,74 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
             </ResizablePanel>
           </ResizablePanelGroup>
           <FileLoader />
+          <div className="flex gap-4 items-end">
+            <FormField
+              control={form.control}
+              name="type_product"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel>Средство</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select a verified email to display" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {typeProducts?.data?.map(({ id, name }) => (
+                        <SelectItem value={`${id}`} key={id}>
+                          {name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button asChild>
+              <Link href="/admin/type-product/create">
+                <PlusIcon />
+              </Link>
+            </Button>
+          </div>
+          <FormField
+            control={form.control}
+            name="article"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Артикул</FormLabel>
+                <FormControl>
+                  <Input placeholder="Введите артикул" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="country"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Страна</FormLabel>
+                <FormControl></FormControl>
+                <Input placeholder="Пример: Россия" {...field} />
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="volume"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Объем</FormLabel>
+                <FormControl></FormControl>
+                <Input placeholder="Пример: 500мл" {...field} />
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <Button type="submit">Отправить</Button>
         </form>
       </Form>

@@ -5,6 +5,7 @@ import { getAllBrands } from "@/api";
 
 export default async function () {
   const brands = await getAllBrands();
+
   return (
     <div className="gap-4 h-[calc(100vh-70px)] grid grid-rows-[min-content_1fr]">
       <TypographyH1>Создание бренда</TypographyH1>

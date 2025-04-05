@@ -1,4 +1,6 @@
 import { Header } from "@/components/Header";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import SideBarPrivate from "@/widgets/SideBar/SideBarPrivate";
 
 export default function RootLayout({
   children,
@@ -6,9 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <Header />
-      <div className="m-auto max-w-[1440px]">{children}</div>
-    </>
+    <SidebarProvider>
+      <SideBarPrivate />
+      <main className="w-full dark">
+        <Header />
+        <div className="m-auto max-w-[1440px] p-8 w-full">{children}</div>
+      </main>
+    </SidebarProvider>
   );
 }

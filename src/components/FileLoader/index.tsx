@@ -9,8 +9,17 @@ import { useFormContext } from "react-hook-form";
 export const FileLoader = () => {
   const form = useFormContext();
 
+  const onChangeTab = (value: string) => {
+    console.log(value, form.getValues("file_string"), form.getValues("file_blob"));
+    if (value === "link") {
+      form.resetField("file_blob");
+    } else {
+      form.resetField("file_string");
+    }
+  };
+
   return (
-    <Tabs defaultValue="link" className="w-full flex flex-col gap-4">
+    <Tabs defaultValue="link" className="w-full flex flex-col gap-4" onValueChange={onChangeTab}>
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="link">Link</TabsTrigger>
         <TabsTrigger value="file">File</TabsTrigger>

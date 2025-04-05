@@ -42,7 +42,7 @@ export default function Page() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const data = await LogInRequest(values);
-
+      console.log(data);
       if (data?.userId) {
         await createSession(data.userId);
         router.push("/admin/sell");

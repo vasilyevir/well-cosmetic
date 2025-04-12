@@ -2,7 +2,7 @@
 
 import { CellContext } from "@tanstack/table-core";
 import { SellRequest, StatusEnum } from "@/api/sell/type";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { updateStatusSell } from "@/api/sell";
 import {
   Select,
@@ -11,59 +11,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TypographyP } from "@/ui/Text";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { StatusOptions } from "@/constants/options";
+import { format } from "date-fns";
 
-const StatusOptions: {
-  value: StatusEnum;
-  key: string;
-}[] = [
-  {
-    value: StatusEnum.NEW,
-    key: "Новый",
-  },
-  {
-    value: StatusEnum.PROCESSING,
-    key: "В обработке",
-  },
-  {
-    value: StatusEnum.WAIT_PAYMENT,
-    key: "Ожидает оплаты",
-  },
-  {
-    value: StatusEnum.WAIT_DELIVERY,
-    key: "Ожидает отправки",
-  },
-  {
-    value: StatusEnum.IN_DELIVERY,
-    key: "Передан в службу доставки",
-  },
-  {
-    value: StatusEnum.READY_TO_RECEIVE,
-    key: "Готов к получению",
-  },
-  {
-    value: StatusEnum.CANCELED,
-    key: "Отменен",
-  },
-  {
-    value: StatusEnum.RETURN,
-    key: "Возврат",
-  },
-  {
-    value: StatusEnum.DONE,
-    key: "Выполнен",
-  },
-];
+import { Tags } from "@/components/AdminSellContent/Tags";
 
 export const StatusCell = ({ row }: CellContext<SellRequest, any>) => {
-  const { id, status, products } = row.getValue<{
+  const { id, status, products, created_at, notes } = row.getValue<{
     id: SellRequest["id"];
     status: SellRequest["status"];
     products: SellRequest["products"];
+    created_at: SellRequest["created_at"];
+    notes: SellRequest["notes"];
   }>("status_column");
+
   const [value, setValue] = useState(status);
 
   const onChange = async (value: StatusEnum) => {
@@ -72,8 +37,12 @@ export const StatusCell = ({ row }: CellContext<SellRequest, any>) => {
     setValue(newStatus);
   };
 
+  useEffect(() => {
+    setValue(status);
+  }, [status]);
+
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-start">
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Theme" />
@@ -86,25 +55,32 @@ export const StatusCell = ({ row }: CellContext<SellRequest, any>) => {
           ))}
         </SelectContent>
       </Select>
-      <HoverCard>
-        <HoverCardTrigger asChild className="text-left w-min">
-          <Button variant="link" className="text-blue-400">
+      <Popover>
+        <PopoverTrigger asChild className="text-left w-min">
+          <Button variant="link" className="text-blue-400 p-0">
             Выбрано {products.length} продуктов
           </Button>
-        </HoverCardTrigger>
-        <HoverCardContent className="w-80">
+        </PopoverTrigger>
+        <PopoverContent className="w-80">
           <ul>
             {products.map((el) => (
               <li key={el.id} className="flex justify-between w-full">
                 <Link href={`/product/${el.id}`}>
                   <TypographyP className="text-blue-400">{el.name}</TypographyP>
                 </Link>
-                <TypographyP>{el.amountSelected} шт.</TypographyP>
+                <TypographyP className="shrink-0">{el.amountSelected} шт.</TypographyP>
               </li>
             ))}
           </ul>
-        </HoverCardContent>
-      </HoverCard>
+        </PopoverContent>
+      </Popover>
+      <div className="flex gap-2">
+        <TypographyP>Дата создания:</TypographyP>
+        <TypographyP className="font-bold">{format(created_at, "PPP")}</TypographyP>
+      </div>
+      <div>
+        <Tags notes={notes} sell_id={id} />
+      </div>
     </div>
   );
 };

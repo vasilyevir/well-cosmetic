@@ -11,10 +11,14 @@ export const createProduct = async ({
   price,
   amount,
   description,
+  article,
+  volume,
+  id_type_product,
+  country,
 }: ProductCreateType) => {
   const data = await sql<ProductType>`
-    INSERT INTO product (name, image, id_category, price_with_sale, price, amount, description) 
-    VALUES (${name}, ${image}, ${id_category}, ${price_with_sale}, ${price}, ${amount}, ${description}) 
+    INSERT INTO product (name, image, id_category, price_with_sale, price, amount, description, article, id_type_product, country, volume) 
+    VALUES (${name}, ${image}, ${id_category}, ${price_with_sale}, ${price}, ${amount}, ${description}, ${article}, ${id_type_product}, ${country}, ${volume}) 
     RETURNING id, name, image, id_category, price_with_sale, price, amount, description;
   `;
 

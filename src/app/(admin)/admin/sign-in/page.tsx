@@ -18,6 +18,8 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { createSession } from "@/lib/session";
 import { LogInRequest } from "@/api/user/login";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }).trim(),
@@ -39,17 +41,21 @@ export default function Page() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      const data = await LogInRequest(values);
-      console.log(data);
+  const { mutate } = useMutation({
+    mutationFn: LogInRequest,
+    onSuccess: async (data) => {
       if (data?.userId) {
         await createSession(data.userId);
         router.push("/admin/sell");
       }
-    } catch (e) {
-      console.log(e);
-    }
+    },
+    onError: async () => {
+      toast.error("Произошла ошибка");
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    mutate(values);
   }
 
   return (

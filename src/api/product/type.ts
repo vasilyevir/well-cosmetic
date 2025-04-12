@@ -11,6 +11,7 @@ export interface ProductType {
   country?: string;
   volume?: string;
   type_product?: string;
+  id_type_product?: string;
 }
 
 export interface ProductMutatedType extends ProductType {
@@ -29,7 +30,7 @@ export interface ProductCreateType {
   article?: string;
   country?: string;
   volume?: string;
-  type_product?: string;
+  id_type_product?: string;
 }
 
 export interface ProductEditType extends ProductCreateType {

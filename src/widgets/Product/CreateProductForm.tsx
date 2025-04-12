@@ -58,9 +58,10 @@ interface CreateProductForm {
     id_brand: string;
   };
   brands: BrandType[];
+  isEdit?: boolean;
 }
 
-export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) => {
+export const CreateProductForm = ({ defaultValues, brands, isEdit }: CreateProductForm) => {
   const form = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -73,7 +74,7 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
       description: defaultValues?.description || "",
       amount: defaultValues?.amount || 0,
       article: defaultValues?.article || "",
-      type_product: `${defaultValues?.type_product || ""}`,
+      type_product: `${defaultValues?.id_type_product || ""}`,
       volume: defaultValues?.volume || "",
       country: defaultValues?.country || "",
     },
@@ -113,11 +114,15 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
       id_category,
       file_string,
       file_blob,
+      article,
+      type_product,
+      country,
+      volume,
     } = data;
     let results;
     const image = await download({ file_blob: file_blob, file_string });
 
-    if (!defaultValues) {
+    if (!isEdit) {
       results = await createProduct({
         name,
         id_category,
@@ -126,6 +131,10 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
         price,
         price_with_sale: price_with_sale ? Number(price_with_sale) : 0,
         amount,
+        id_type_product: type_product,
+        article,
+        volume,
+        country,
       });
     } else {
       results = await editProduct({
@@ -136,7 +145,11 @@ export const CreateProductForm = ({ defaultValues, brands }: CreateProductForm) 
         price,
         price_with_sale: price_with_sale ? Number(price_with_sale) : 0,
         amount,
-        id: defaultValues.id,
+        id: defaultValues?.id || "1",
+        id_type_product: type_product,
+        article,
+        volume,
+        country,
       });
     }
 

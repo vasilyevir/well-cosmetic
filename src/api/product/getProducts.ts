@@ -29,8 +29,9 @@ export const getProducts = async ({ idCategory }: { idCategory: string }) => {
 
 export const getProductID = async ({ id }: { id: string }) => {
   const data = await sql<ProductMutatedType>`
-    SELECT p.*
+    SELECT p.*, tp.name AS type_product
     FROM product p
+    LEFT JOIN type_product tp ON p.id_type_product = tp.id
     WHERE p.id = ${id}
   `;
   const product = data.rows?.[0];

@@ -27,9 +27,7 @@ export const LogInRequest = async ({ email, password }: z.infer<typeof formSchem
         SELECT password, email, id FROM "user" WHERE email = ${email}
       `;
     } catch (e) {
-      return {
-        message: "An error occurred while creating your account.",
-      };
+      throw new Error("Произошла ошибка во время проверки аккауета");
     }
 
     const { id, password: passwordUser } = data?.rows[0] || {};
@@ -37,9 +35,7 @@ export const LogInRequest = async ({ email, password }: z.infer<typeof formSchem
     const isValid = await bcrypt.compare(password, passwordUser);
 
     if (!id || !isValid) {
-      return {
-        message: "An error occurred while creating your account.",
-      };
+      throw new Error("Пароль или почта не верны");
     }
 
     return { userId: `${id}` };

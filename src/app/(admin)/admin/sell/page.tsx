@@ -1,6 +1,7 @@
 import { getSells } from "@/api/sell";
-import { DataTable } from "@/app/(client)/cart/data-table";
-import { columns } from "@/components/Sell/columns";
+
+import { TableContent } from "@/components/AdminSellContent/TableContent";
+import { SellRequest } from "@/api/sell/type";
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
@@ -8,15 +9,23 @@ export default async function AdminSellPage(props: { searchParams: SearchParams 
   const searchParams = await props.searchParams;
   const limit = searchParams.limit;
   const offset = searchParams.offset;
+  const status = searchParams.status;
 
-  const sells = await getSells({
-    limit,
-    offset,
-  });
+  let sells: SellRequest[] = [];
+
+  try {
+    sells = await getSells({
+      limit,
+      offset,
+      status,
+    });
+  } catch (e) {
+    console.log(e);
+  }
 
   return (
     <div className="w-full overflow-auto">
-      <DataTable data={sells} columns={columns} />
+      <TableContent sells={sells} />
     </div>
   );
 }

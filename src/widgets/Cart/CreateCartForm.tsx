@@ -36,6 +36,7 @@ const formSchema = z.object({
   phone: z.string(),
   name: z.string(),
   second_name: z.string(),
+  email: z.string().email(),
 });
 type FormSchemaType = z.infer<typeof formSchema>;
 
@@ -46,11 +47,19 @@ export const CreateCartForm = () => {
       name: "",
       second_name: "",
       phone: "",
+      email: "",
     },
   });
   const router = useRouter();
   const { cart, priceTotal, clearCart } = useCartStore((store) => store);
-  const onSubmit = async ({ name, second_name, payment, delivery, phone }: FormSchemaType) => {
+  const onSubmit = async ({
+    name,
+    second_name,
+    payment,
+    delivery,
+    phone,
+    email,
+  }: FormSchemaType) => {
     const result = await createSell({
       name,
       second_name,
@@ -58,6 +67,7 @@ export const CreateCartForm = () => {
       delivery,
       phone,
       products: cart,
+      email,
     });
 
     if (result.id) {
@@ -196,6 +206,19 @@ export const CreateCartForm = () => {
                     <FormLabel>Номер телефона</FormLabel>
                     <FormControl>
                       <Input placeholder="Номер телефона" type="tel" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Почта</FormLabel>
+                    <FormControl>
+                      <Input placeholder="example@mail.com" type="email" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

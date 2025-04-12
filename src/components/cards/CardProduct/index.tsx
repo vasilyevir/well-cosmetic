@@ -78,7 +78,7 @@ export const CardProduct = (
               </Link>
             </Button>
             <Button asChild size="icon" variant="secondary">
-              <Link href={`/admin/product/${id}/edit`}>
+              <Link href={`/admin/product/${id}/copy`}>
                 <CopyIcon />
               </Link>
             </Button>

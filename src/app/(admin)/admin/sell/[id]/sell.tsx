@@ -8,6 +8,7 @@ import { SellRequest } from "@/api/sell/type";
 import { TypographyLarge, TypographyP } from "@/ui/Text";
 import { DeliveryDescription, PaymentDescription } from "@/constants/descriprion";
 import { CardCart } from "@/components/cards/CardCart";
+import { Tags } from "@/components/AdminSellContent/Tags";
 
 interface SellProps {
   sell: SellRequest;
@@ -39,6 +40,7 @@ export const Sell = ({ sell }: SellProps) => {
       data: `${DeliveryDescription[data.delivery]}`,
     },
   ];
+
   return (
     <div className="grid grid-cols-2 gap-4">
       <div className="flex flex-col gap-8">
@@ -53,6 +55,7 @@ export const Sell = ({ sell }: SellProps) => {
         </div>
         <div>
           <TypographyLarge>Метки</TypographyLarge>
+          <Tags notes={data.notes} sell_id={id} />
         </div>
       </div>
       <div className="flex flex-col gap-8">

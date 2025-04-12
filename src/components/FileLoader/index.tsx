@@ -10,7 +10,6 @@ export const FileLoader = () => {
   const form = useFormContext();
 
   const onChangeTab = (value: string) => {
-    console.log(value, form.getValues("file_string"), form.getValues("file_blob"));
     if (value === "link") {
       form.resetField("file_blob");
     } else {

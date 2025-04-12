@@ -20,16 +20,24 @@ export interface BodyCreateSell {
   delivery: DeliveryCart;
   phone: string;
   products: ProductCartType[];
+  email: string;
 }
 
 export interface SellRequest extends BodyCreateSell {
   id: number;
   status: StatusEnum;
+  created_at: string;
+  notes: { id: string; description: string; sell_id: string }[];
 }
 
+export type SearchParam = string | string[] | null;
+
 export interface SearchParams {
-  limit?: string | string[];
-  offset?: string | string[];
+  limit?: SearchParam;
+  offset?: SearchParam;
+  status?: SearchParam;
+  date_from?: SearchParam;
+  date_to?: SearchParam;
 }
 
 export interface IUserInfo {

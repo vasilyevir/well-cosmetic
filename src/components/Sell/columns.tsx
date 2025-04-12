@@ -11,14 +11,12 @@ import { DeliveryDescription, PaymentDescription } from "@/constants/descriprion
 
 export const columns: ColumnDef<SellRequest>[] = [
   {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
     accessorFn: (row) => ({
       status: row.status,
       id: row.id,
       products: row.products,
+      created_at: row.created_at,
+      notes: row.notes,
     }),
     id: "status_column",
     header: "Статус",
@@ -37,7 +35,7 @@ export const columns: ColumnDef<SellRequest>[] = [
         return acc + el.price * el.amountSelected;
       }, 0);
 
-      return <TypographyLarge>{totalPrice}</TypographyLarge>;
+      return <TypographyLarge>{totalPrice} ₽</TypographyLarge>;
     },
   },
 
@@ -69,10 +67,12 @@ export const columns: ColumnDef<SellRequest>[] = [
     },
   },
   {
-    accessorKey: "actions",
+    accessorFn: ({ id }) => ({ id }),
     header: "Действия",
+    id: "actions",
     cell: ({ row }) => {
-      const id = row.getValue("id");
+      const { id } = row.getValue<{ id: SellRequest["id"] }>("actions");
+
       return (
         <Button asChild size="icon" variant="secondary">
           <Link href={`/admin/sell/${id}`}>

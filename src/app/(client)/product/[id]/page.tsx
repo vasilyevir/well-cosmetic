@@ -8,8 +8,9 @@ import {
 } from "@/components/ui/breadcrumb";
 import { getProductID } from "@/api";
 import Image from "next/image";
-import { TypographyLarge } from "@/ui/Text";
+import { TypographyLarge, TypographyP } from "@/ui/Text";
 import { Sidebar } from "@/app/(client)/product/[id]/Sidebar";
+import { Separator } from "@/components/ui/separator";
 
 export default async function PageBrand({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -42,6 +43,26 @@ export default async function PageBrand({ params }: { params: Promise<{ id: stri
         </div>
         <div className="w-full h-full flex flex-col bg-gray-400/30 p-8 rounded-lg">
           <Sidebar product={product} />
+        </div>
+        <div className="col-span-3 grid grid-cols-[1fr_min-content_1fr] gap-4  bg-gray-800/60 rounded-2xl p-4">
+          <div className="flex w-full justify-between">
+            <TypographyP>Код товара</TypographyP>
+            <TypographyP>{product?.article || ""}</TypographyP>
+          </div>
+          <Separator orientation="vertical" />
+          <div className="flex w-full justify-between">
+            <TypographyP>Страна</TypographyP>
+            <TypographyP>{product?.country || ""}</TypographyP>
+          </div>
+          <div className="flex w-full justify-between">
+            <TypographyP>Объем</TypographyP>
+            <TypographyP>{product?.volume || ""}</TypographyP>
+          </div>
+          <Separator orientation="vertical" />
+          <div className="flex w-full justify-between">
+            <TypographyP>Средства</TypographyP>
+            <TypographyP>{product?.type_product || ""}</TypographyP>
+          </div>
         </div>
         <div className="col-span-3">
           <TypographyLarge>{product?.description}</TypographyLarge>

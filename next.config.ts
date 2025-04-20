@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "new-well-cosmetics.vercel.app",
+      }
+      {
+        protocol: "https",
         hostname: "m7zas4xswxdvpdt7.public.blob.vercel-storage.com",
       },
     ],

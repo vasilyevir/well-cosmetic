@@ -50,7 +50,7 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
   };
 
   return (
-    <div className="flex flex-col gap-4 p-8">
+    <div className="flex flex-col gap-4 py-4">
       <div className="flex w-full justify-between items-center">
         <Breadcrumb>
           <BreadcrumbList>
@@ -69,7 +69,7 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
           </Button>
         )}
       </div>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="cards-container grid-cols-4 gap-8">
         {categoriesList.map(({ id, image, name }) => (
           <Card className="h-full" key={id}>
             <CardHeader>

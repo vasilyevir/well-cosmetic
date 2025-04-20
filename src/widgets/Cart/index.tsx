@@ -41,13 +41,13 @@ export const Cart = () => {
           <FaShoppingCart />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-120 flex flex-col gap-4">
+      <PopoverContent className="w-screen md:w-120 flex flex-col gap-4">
         <div className="flex justify-between">
           <TypographyLarge>Корзина</TypographyLarge>
           <Button onClick={clearCart}>Очистить</Button>
         </div>
-        <ScrollArea className="h-120">
-          <div className="flex flex-col gap-4">
+        <ScrollArea className="h-120 w-full overflow-hidden">
+          <div className="flex flex-col gap-4 w-full overflow-hidden">
             {cart.length ? cart.map((item) => <CardCart {...item} key={item.id} />) : <EmptyList />}
           </div>
         </ScrollArea>

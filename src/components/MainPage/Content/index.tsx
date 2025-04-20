@@ -49,7 +49,7 @@ export const MainPageContent = ({ brands, isEditable }: MainPageContentProps) =>
   };
 
   return (
-    <div className="p-8 flex flex-col gap-16 --font-sans">
+    <div className="flex flex-col gap-16 --font-sans">
       <div className="flex w-full items-center justify-between">
         <TypographyH1>Выбор бренда</TypographyH1>
         {isEditable && (
@@ -58,12 +58,14 @@ export const MainPageContent = ({ brands, isEditable }: MainPageContentProps) =>
           </Button>
         )}
       </div>
-      <div className="grid grid-cols-4 gap-4">
-        {data?.map((brand) => (
+      <div className="cards-container">
+        {brandList?.map((brand) => (
           <div className="flex flex-col gap-4" key={`brand_${brand.id}`}>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square relative">
-                <Image src={brand.image} alt={brand.name} fill className="rounded-lg" />
+                <Link href={`/${prefix}brand/${brand.id}`} className={"w-full h-full"}>
+                  <Image src={brand.image} alt={brand.name} fill className="rounded-lg" />
+                </Link>
                 {isEditable && (
                   <div className="absolute top-3 right-3 flex gap-2">
                     <AlertDialog>

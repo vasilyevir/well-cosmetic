@@ -4,36 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add edit and delete functional">
-      <change afterPath="$PROJECT_DIR$/src/api/notes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin/product/[id]/copy/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AdminSellContent/TableContent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AdminSellContent/Tags.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AdminSellContent/useSearchParamsSellContent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/options.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/Footer/index.tsx" afterDir="false" />
+    <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add copy function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/product/createProduct.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/createProduct.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/product/getProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/getProducts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/product/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/product/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/sell/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/sell/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/sell/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/sell/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/sell/[id]/sell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sell/[id]/sell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/sell/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sell/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/image/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/brand/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/product/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/product/create/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/sign-in/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sign-in/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(client)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(client)/product/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/product/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileLoader/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileLoader/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sell/Cell/StatusCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sell/Cell/StatusCell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sell/columns.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sell/columns.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardProduct/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardProduct/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/popover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/popover.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/session.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Cart/CreateCartForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Cart/CreateCartForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Product/CreateProductForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Product/CreateProductForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdminSellContent/TableContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AdminSellContent/TableContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Category/PageCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Category/PageCategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/SideBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/SideBar/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +66,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -207,7 +192,11 @@
       <workItem from="1742230279806" duration="145075000" />
       <workItem from="1743170408206" duration="102218000" />
       <workItem from="1744311902607" duration="3960000" />
-      <workItem from="1744451525223" duration="46000" />
+      <workItem from="1744451525223" duration="13378000" />
+      <workItem from="1744740003862" duration="1538000" />
+      <workItem from="1744825945558" duration="1509000" />
+      <workItem from="1744912452966" duration="938000" />
+      <workItem from="1745058948593" duration="5419000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -273,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743871899163</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add copy function">
+      <option name="closed" value="true" />
+      <created>1744451825179</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744451825179</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +283,7 @@
     <MESSAGE value="add admin" />
     <MESSAGE value="add env" />
     <MESSAGE value="add edit and delete functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="add edit and delete functional" />
+    <MESSAGE value="add copy function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add copy function" />
   </component>
 </project>

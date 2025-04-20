@@ -42,7 +42,7 @@ export const PageCategory = ({
   };
 
   return (
-    <div className="flex flex-col gap-4 p-8">
+    <div className="flex flex-col gap-4">
       <div className="flex w-full justify-between items-center">
         <Breadcrumb>
           <BreadcrumbList>
@@ -65,7 +65,7 @@ export const PageCategory = ({
           </Button>
         )}
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="cards-container gap-2">
         {categories.map((product) => (
           <CardProduct
             {...product}

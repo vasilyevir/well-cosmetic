@@ -124,3 +124,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  @apply gap-4;
+}

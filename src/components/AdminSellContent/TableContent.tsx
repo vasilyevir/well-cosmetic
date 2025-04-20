@@ -106,7 +106,7 @@ export const TableContent = ({ sells }: TableContentProps) => {
 
   const { data } = useQuery({
     queryFn: () => getSells({ limit, offset, status, date_to, date_from }),
-    queryKey: [QueryKeyEnum.Sell],
+    queryKey: [QueryKeyEnum.Sell, { created_from: date_from, created_to: date_to, status }],
     initialData: sells,
   });
 

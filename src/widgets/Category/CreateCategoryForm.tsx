@@ -81,7 +81,7 @@ export const CreateCategoryForm = ({
     }
 
     if (file_blob) {
-      const link = await upload(file_blob[0], `/product/`);
+      const link = await upload(file_blob[0]);
 
       if (id) {
         id_category = await edit({ name, image: link, id_brand, id });

@@ -54,7 +54,7 @@ export default function CreateBrandForm({ name, file, isEditable }: CreateBrandF
     }
 
     if (file_blob) {
-      const link = await upload(file_blob[0], `/product/`);
+      const link = await upload(file_blob[0]);
 
       if (isEditable) {
         result = await editBrand({ name, image: link, id });

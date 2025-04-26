@@ -17,6 +17,8 @@ import { useParams, useRouter } from "next/navigation";
 import { upload } from "@/api/image";
 import { createBrand, editBrand } from "@/api/brand/createBrand";
 import { FileLoader } from "@/components/FileLoader";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { QueryKeyEnum } from "@/api/queryKey.enum";
 
 const formSchema = z.object({
   name: z.string().trim(),
@@ -33,7 +35,9 @@ interface CreateBrandFormProps {
 
 export default function CreateBrandForm({ name, file, isEditable }: CreateBrandFormProps) {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const { id } = useParams<{ id: string }>();
+
   const form = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,28 +46,40 @@ export default function CreateBrandForm({ name, file, isEditable }: CreateBrandF
     },
   });
 
+  const { mutate: editMutate } = useMutation({
+    mutationFn: editBrand,
+    mutationKey: [QueryKeyEnum.Brand],
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QueryKeyEnum.Brand] });
+
+      router.push("/admin/brand");
+    },
+  });
+
+  const { mutate: createMutate } = useMutation({
+    mutationFn: createBrand,
+    mutationKey: [QueryKeyEnum.Brand],
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QueryKeyEnum.Brand] });
+
+      router.push("/admin/brand");
+    },
+  });
+
   const handleSubmit = async ({ name, file_blob, file_string }: FormSchemaType) => {
-    let result;
+    let image;
 
     if (file_string) {
-      if (isEditable) {
-        result = await editBrand({ name, image: file_string, id });
-      } else {
-        result = await createBrand({ name, image: file_string });
-      }
+      image = file_string;
+    } else {
+      image = await upload(file_blob[0]);
     }
 
-    if (file_blob) {
-      const link = await upload(file_blob[0]);
-
-      if (isEditable) {
-        result = await editBrand({ name, image: link, id });
-      } else {
-        result = await createBrand({ name, image: link });
-      }
+    if (isEditable) {
+      editMutate({ name, image, id });
+    } else {
+      createMutate({ name, image });
     }
-
-    if (result) router.push("/admin/brand");
   };
 
   return (

@@ -21,6 +21,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { deleteBrand } from "@/api/brand/createBrand";
 import { useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { QueryKeyEnum } from "@/api/queryKey.enum";
 
 interface MainPageContentProps {
   brands: Array<MutatedBrandType>;
@@ -28,14 +30,22 @@ interface MainPageContentProps {
 }
 
 export const MainPageContent = ({ brands, isEditable }: MainPageContentProps) => {
-  const [brandList, setBrands] = useState(brands);
   const prefix = isEditable ? "admin/" : "";
+  const queryClient = useQueryClient();
+  const { data } = useQuery({
+    queryFn: GetBrand,
+    queryKey: [QueryKeyEnum.Brand],
+    initialData: brands,
+  });
 
+  const { mutate } = useMutation({
+    mutationFn: deleteBrand,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QueryKeyEnum.Brand] });
+    },
+  });
   const onDelete = async (id: string) => {
-    await deleteBrand(id);
-
-    const brandsResult = await GetBrand();
-    setBrands(brandsResult);
+    mutate(id);
   };
 
   return (
@@ -49,7 +59,7 @@ export const MainPageContent = ({ brands, isEditable }: MainPageContentProps) =>
         )}
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {brandList?.map((brand) => (
+        {data?.map((brand) => (
           <div className="flex flex-col gap-4" key={`brand_${brand.id}`}>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square relative">

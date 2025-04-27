@@ -42,8 +42,8 @@ export const PageCategory = ({
   };
 
   return (
-    <div className="flex flex-col gap-4 p-8">
-      <div className="flex w-full justify-between items-center">
+    <div className="flex flex-col gap-4">
+      <div className="flex w-full justify-between items-center flex-wrap gap-4">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -61,11 +61,13 @@ export const PageCategory = ({
         </Breadcrumb>
         {isEditable && (
           <Button asChild>
-            <Link href="/admin/product/create">Создать</Link>
+            <Link href="/admin/product/create" className="w-full md:w-max">
+              Создать
+            </Link>
           </Button>
         )}
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="cards-container gap-2">
         {categories.map((product) => (
           <CardProduct
             {...product}

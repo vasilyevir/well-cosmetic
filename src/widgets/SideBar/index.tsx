@@ -13,7 +13,7 @@ export default async function SideBar() {
   const brands = await GetBrand();
 
   return (
-    <Sidebar>
+    <Sidebar variant="floating" collapsible="offcanvas">
       <SidebarHeader />
       <SidebarContent>
         <SidebarMenu>

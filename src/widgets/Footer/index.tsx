@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col bg-gray-800/60">
       <Separator />
       <div className="flex flex-col w-full gap-4 p-4">
         <TypographyP>Интернет-магазин "Well-cosmetics"</TypographyP>

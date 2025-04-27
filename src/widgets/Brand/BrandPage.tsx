@@ -15,7 +15,6 @@ import { TypographyLarge } from "@/ui/Text";
 import { CategoryMutatedType, getCategories } from "@/api/category";
 import { Button } from "@/components/ui/button";
 import { PencilIcon, TrashIcon } from "lucide-react";
-import { useState } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -29,29 +28,39 @@ import {
 } from "@/components/ui/alert-dialog";
 import { deleteCategory } from "@/api/category/createCategory";
 import { useParams } from "next/navigation";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { QueryKeyEnum } from "@/api/queryKey.enum";
+import { BrandType } from "@/api";
 
 interface BrandPageProps {
   brand_name: string;
-  categories: CategoryMutatedType[];
+  categories: {
+    results: CategoryMutatedType[];
+    brand: BrandType[];
+  };
   isEditable?: boolean;
 }
 
 export default function BrandPage({ categories, brand_name, isEditable }: BrandPageProps) {
-  const [categoriesList, setCategories] = useState(categories);
   const prefix = isEditable ? "/admin/brand" : "";
   const { id: idBrand } = useParams<{ id: string }>();
+  const queryClient = useQueryClient();
+  const { data } = useQuery({
+    queryFn: async () => getCategories({ id: idBrand }),
+    queryKey: [QueryKeyEnum.Category, { id: idBrand }],
+    initialData: categories,
+  });
 
-  const onDelete = async (idCategory: string) => {
-    await deleteCategory({ id: idCategory });
-
-    const categories = await getCategories({ id: idBrand });
-
-    setCategories(categories.results);
-  };
+  const { mutate } = useMutation({
+    mutationFn: deleteCategory,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QueryKeyEnum.Category, { id: idBrand }] });
+    },
+  });
 
   return (
-    <div className="flex flex-col gap-4 p-8">
-      <div className="flex w-full justify-between items-center">
+    <div className="flex flex-col gap-4 py-4">
+      <div className="flex w-full justify-between items-center flex-wrap gap-4">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -65,12 +74,14 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
         </Breadcrumb>
         {isEditable && (
           <Button asChild>
-            <Link href={`/admin/category/create`}>Создать</Link>
+            <Link href={`/admin/category/create`} className="w-full md:w-max">
+              Создать
+            </Link>
           </Button>
         )}
       </div>
-      <div className="grid grid-cols-4 gap-8">
-        {categoriesList.map(({ id, image, name }) => (
+      <div className="cards-container grid-cols-4 gap-8">
+        {data.results.map(({ id, image, name }) => (
           <Card className="h-full" key={id}>
             <CardHeader>
               <div className="w-full aspect-square relative">
@@ -94,7 +105,7 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
                         </AlertDialogHeader>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Отмена</AlertDialogCancel>
-                          <AlertDialogAction onClick={() => onDelete(id)}>
+                          <AlertDialogAction onClick={() => mutate({ id })}>
                             Продолжить
                           </AlertDialogAction>
                         </AlertDialogFooter>

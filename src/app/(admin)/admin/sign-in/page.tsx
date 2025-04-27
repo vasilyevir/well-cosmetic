@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { TypographyH1 } from "@/ui/Text";
+import { TypographyH1, TypographyP } from "@/ui/Text";
 import {
   Form,
   FormControl,
@@ -93,7 +93,7 @@ export default function Page() {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Отправить</Button>
             </form>
           </Form>
         </CardContent>

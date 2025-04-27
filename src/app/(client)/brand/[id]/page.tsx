@@ -5,13 +5,13 @@ import BrandPage from "@/widgets/Brand/BrandPage";
 
 export default async function PageBrand({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const { results, brand } = await getCategories({ id });
+  const categories = await getCategories({ id });
 
-  if (!results.length) {
+  if (!categories.results.length) {
     notFound();
   }
 
-  const { name } = brand[0];
+  const { name } = categories.brand[0];
 
-  return <BrandPage brand_name={name} categories={results} />;
+  return <BrandPage brand_name={name} categories={categories} />;
 }

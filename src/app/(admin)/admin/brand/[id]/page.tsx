@@ -7,5 +7,5 @@ export default async function ({ params }: { params: Promise<{ id: string }> }) 
 
   const brand = categories.brand[0];
 
-  return <BrandPage brand_name={brand.name} categories={categories.results} isEditable />;
+  return <BrandPage brand_name={brand.name} categories={categories} isEditable />;
 }

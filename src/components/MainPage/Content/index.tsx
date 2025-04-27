@@ -59,7 +59,7 @@ export const MainPageContent = ({ brands, isEditable }: MainPageContentProps) =>
         )}
       </div>
       <div className="cards-container">
-        {brandList?.map((brand) => (
+        {data?.map((brand) => (
           <div className="flex flex-col gap-4" key={`brand_${brand.id}`}>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square relative">

@@ -51,7 +51,7 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
 
   return (
     <div className="flex flex-col gap-4 py-4">
-      <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center flex-wrap gap-4">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -65,7 +65,9 @@ export default function BrandPage({ categories, brand_name, isEditable }: BrandP
         </Breadcrumb>
         {isEditable && (
           <Button asChild>
-            <Link href={`/admin/category/create`}>Создать</Link>
+            <Link href={`/admin/category/create`} className="w-full md:w-max">
+              Создать
+            </Link>
           </Button>
         )}
       </div>

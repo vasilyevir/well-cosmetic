@@ -43,7 +43,7 @@ export const PageCategory = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center flex-wrap gap-4">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -61,7 +61,9 @@ export const PageCategory = ({
         </Breadcrumb>
         {isEditable && (
           <Button asChild>
-            <Link href="/admin/product/create">Создать</Link>
+            <Link href="/admin/product/create" className="w-full md:w-max">
+              Создать
+            </Link>
           </Button>
         )}
       </div>

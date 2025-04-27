@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1aeaa4c0-2535-42fd-9eea-492121c4151e" name="Changes" comment="add copy function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/sign-in/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/sign-in/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/brand/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/brand/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(client)/brand/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/Brand/BrandPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Brand/BrandPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Category/PageCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Category/PageCategory.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
